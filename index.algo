@@ -1,0 +1,57 @@
+///The length of the sentence (the number of characters).
+ALGORITHM nuberofcharacter
+VAR
+sentence : STRING;
+length : INTEGER ;
+BEGIN
+
+read(sentence);
+
+length := sentence.length;
+
+write(length);
+    
+END
+
+
+////The number of words in the sentence (assuming that the words are separated by a single space).
+
+ALGORITHM numberofwords
+VAR
+sentence : STRING;
+count : INTEGER;
+wordcount : STRING;
+    
+BEGIN
+ words := sentence.split(' ');
+ wordcount := words.length;
+
+ write(wordcount);
+
+END
+
+//The number of vowels in the sentence.
+
+ALGORITHM vowelCountgit
+
+VAR
+  sentence : STRING;
+  vowels : STRING;
+  vowelCount : INTEGER;
+  char : CHAR;
+  i : INTEGER;
+
+BEGIN
+  vowelCount := 0;
+  vowels := 'aeiou';
+
+  FOR i := 0 TO sentence.length - 1 DO
+    char := sentence[i].toLowerCase();
+    IF vowels.includes(char) THEN
+      vowelCount := vowelCount + 1;
+    ENDIF
+  END FOR;
+
+  WRITE(vowelCount);
+
+END
